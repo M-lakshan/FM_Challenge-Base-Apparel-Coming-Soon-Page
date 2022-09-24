@@ -1,0 +1,324 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    background: $White;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: repeat;
+    color: $White;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px 250px 200px 100px 130px;
+    position: relative;
+    height: fit-content;
+    // max-width: 325px;
+    padding: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    
+    #logo {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 100px;
+        height: auto;
+        margin-top: -5px;
+    }
+
+    .bg_theme_img {
+        position: absolute;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background: url('../images/hero-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100vw;
+        height: 250px;
+        z-index: 3;
+        left: -25px;
+    }
+
+    h1 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin: 62px 0px 25px;
+        padding: 0%;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: 10px;
+        color: $Dark_Grayish_Red;
+        max-width: 325px;
+        
+        span {
+            font-weight: 300;
+            color: $Desaturated_Red;
+        }
+    }
+
+    .intro_desc {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        color: $Desaturated_Red;
+        margin: 0%;
+        padding: 5px 5px;
+        font-size: 13.5px;
+        line-height: 22px;
+        word-spacing: 2px;
+        max-width: 325px;
+    }
+
+    form {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        background: $White;
+        padding: 26px 0px;
+        position: relative;
+        max-width: 325px;
+        // height: inherit;
+
+        input {
+            height: 48px;
+            width: 310px;
+            border: 1px solid $Desaturated_Red;
+            color: $Desaturated_Red;
+            border-radius: 50px;
+            padding: 20px;
+            font-weight: 500;
+            font-size: 14px;
+            font-family: 'Josefin Sans', sans-serif;
+            margin-bottom: 17px;
+            
+            input::placeholder {
+                color: $Desaturated_Red !important;
+            }
+
+            &:active {
+                color: $Black;
+                border: 1px solid $Black;
+            }
+        }
+
+        input.sts_error_emptyfield {
+            color: $White !important;
+        }
+
+        input.sts_error {
+            color: $Red;
+            border: 2px solid $Red;
+        }
+
+        .errors {
+            position: relative;
+            display: none;
+            color: $Red;
+            font-size: 12px;
+            text-align: right;
+            height: 15px;
+            width: 100%;
+
+            .material-symbols-outlined {
+                position: absolute;
+                font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+                right: 76px;
+                top: -54px;
+            }
+
+            .error_txt {
+                position: absolute;
+                width: fit-content;
+                left: 30px;
+                top: -8px;
+            }
+        }
+
+        .errors.active {
+            display: block;
+        }
+
+        #submit_btn {
+            position: absolute;
+            height: 48px;
+            width: 65px;
+            right: 5px;
+            top: 26px;
+            border-radius: 50px;
+            border: none;
+            color: $White !important;
+            background: $Linear_gradient_ii;
+            font-size: 15px;
+            transition: 300ms ease-out;
+            
+            &:hover {
+                cursor: pointer;
+                transition: 300ms ease-in;
+                background: $Linear_gradient_i;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        display: grid !important;
+        grid-template-columns: 165px 655px 610px !important;
+        grid-template-rows: 100px 140px 220px 100px 180px 60px !important;
+        height: fit-content !important;
+        background: url('../images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x:left;
+        background-position-y:center;
+        padding: 0px;
+
+        #logo {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            width: 160px;
+            height: auto;
+            margin-top: 66px;
+        }
+    
+        .bg_theme_img {
+            position: absolute;
+            grid-column: 3/4;
+            grid-row: 1/7;
+            background: url('../images/hero-desktop.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            z-index: 3;
+            left: 5px;
+        }
+            
+        h1 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            margin: -8px 0px 0px;
+            padding: 0%;
+            font-size: 62px;
+            line-height: 68px;
+            letter-spacing: 18px;
+            text-align: left;
+            
+            span {
+                font-weight: 300;
+                color: $Desaturated_Red;
+            }
+        }
+
+        .intro_desc {
+            grid-column: 2/3;
+            grid-row: 4/5;
+            margin: 0%;
+            padding: 0%;
+            max-width: 435px;
+            text-align: left;
+            font-size: 16px;
+            line-height: 28px;
+            word-spacing: 1px;
+            margin-top: -1px;
+        }
+        
+        form {
+            grid-column: 2/3;
+            grid-row: 5/6;
+            background: $White;
+            padding: 22px 0px;
+            position: relative;
+            max-width: 445px;
+            // height: inherit;
+
+            input {
+                height: 56px;
+                width: 445px;
+                border: 1px solid $Desaturated_Red;
+                color: $Desaturated_Red;
+                border-radius: 50px;
+                padding: 20px 20px 20px 30px;
+                font-weight: 500;
+                font-size: 16px;
+                font-family: 'Josefin Sans', sans-serif;
+                margin-bottom: 17px;
+                
+                input::placeholder {
+                    color: $Desaturated_Red !important;
+                }
+
+                &:active {
+                    color: $Black;
+                    border: 1px solid $Black;
+                }
+            }
+
+            input.sts_error_emptyfield {
+                color: $White !important;
+            }
+
+            input.sts_error {
+                color: $Red;
+                border: 2px solid $Red;
+            }
+
+            .errors {
+                position: relative;
+                display: none;
+                color: $Red;
+                font-size: 14px;
+                text-align: right;
+                height: 15px;
+                width: 100%;
+
+                .material-symbols-outlined {
+                    position: absolute;
+                    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+                    right: 76px;
+                    top: -54px;
+                }
+
+                .error_txt {
+                    position: absolute;
+                    width: fit-content;
+                    left: 30px;
+                    top: -8px;
+                }
+            }
+
+            .errors.active {
+                display: block;
+            }
+
+            #submit_btn {
+                position: absolute;
+                height: 56px;
+                width: 100px;
+                right: 0px;
+                top: 22px;
+                border-radius: 50px;
+                border: none;
+                color: $White !important;
+                background: $Linear_gradient_ii;
+                font-size: 15px;
+                transition: 300ms ease-out;
+                
+                &:hover {
+                    cursor: pointer;
+                    transition: 300ms ease-in;
+                    background: $Linear_gradient_i;
+                }
+            }
+        }
+    }
+}
