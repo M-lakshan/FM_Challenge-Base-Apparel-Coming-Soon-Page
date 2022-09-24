@@ -47,7 +47,11 @@
 
 ### Links
 
+<<<<<<< HEAD
 - Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/a-simple-coming-soon-page-for-an-apparel-company-website-b2H9pOxuAk)
+=======
+- Solution URL: [Frontend Mentor Solution Page] (https://www.frontendmentor.io/solutions/a-simple-coming-soon-page-for-an-apparel-company-website-b2H9pOxuAk)
+>>>>>>> 67695c6e120ee40b3e9a56960e8761de5d0da9e7
 - Live Site URL: [GitHub Pages](https://m-lakshan.github.io/FM_Challenge-Base-Apparel-Coming-Soon-Page/)
 
 ## My process
