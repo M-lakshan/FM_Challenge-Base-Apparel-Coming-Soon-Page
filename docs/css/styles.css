@@ -44,7 +44,7 @@ footer .attribution:hover {
 }
 
 footer .attribution a {
-  color: white;
+  color: #ff7a7a;
 }
 
 @media screen and (min-width: 1080px) {
@@ -65,7 +65,7 @@ footer .attribution a {
     opacity: 100%;
   }
   footer .attribution a {
-    color: white;
+    color: #ff7a7a;
   }
 }
 
